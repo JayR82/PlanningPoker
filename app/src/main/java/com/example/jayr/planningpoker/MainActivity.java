@@ -122,6 +122,9 @@ public class MainActivity extends AppCompatActivity {
                 case 9:
                     textView.setText("0");
                     break;
+                case 10:
+                    textView.setText("?");
+                    break;
 
             }
 
@@ -148,8 +151,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 8 total pages.
-            return 9;
+            // Show 10 total pages.
+            return 10;
         }
 
         @Override
@@ -173,6 +176,8 @@ public class MainActivity extends AppCompatActivity {
                     return "SECTION 8";
                 case 8:
                     return "SECTION 9";
+                case 9:
+                    return "SECTION 10";
 
             }
             return null;
