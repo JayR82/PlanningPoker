@@ -152,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
                     textView2.setText("");
                     textView.setText("?");
                     break;
-
             }
 
             return rootView;
