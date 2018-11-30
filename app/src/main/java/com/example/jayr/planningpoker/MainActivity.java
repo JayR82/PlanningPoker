@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -56,11 +57,6 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -89,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             return fragment;
         }
 
-        private RelativeLayout mRelativeLayout;
+        private LinearLayout mLinearLayout;
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -97,58 +93,58 @@ public class MainActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             TextView textView2 = (TextView) rootView.findViewById(R.id.textView3);
-            mRelativeLayout = (RelativeLayout)rootView.findViewById(R.id.relativeLayout);
+            mLinearLayout = (LinearLayout)rootView.findViewById(R.id.LinearLayout);
 
             int iPage;
             iPage = getArguments().getInt(ARG_SECTION_NUMBER);
             switch(iPage){
                 case 1:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(204, 204, 179));
-                    textView2.setText("1");
+                    mLinearLayout.setBackgroundColor(Color.rgb(204, 204, 179));
+                    textView2.setText(" 1");
                     textView.setText("XXS");
                     break;
                 case 2:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(51, 153, 255));
-                    textView2.setText("2");
+                    mLinearLayout.setBackgroundColor(Color.rgb(51, 153, 255));
+                    textView2.setText(" 2");
                     textView.setText("XS");
                     break;
                 case 3:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(0, 0, 153));
-                    textView2.setText("3");
+                    mLinearLayout.setBackgroundColor(Color.rgb(0, 0, 153));
+                    textView2.setText(" 3");
                     textView.setText("S");
                     break;
                 case 4:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(0, 102, 0));
-                    textView2.setText("5");
+                    mLinearLayout.setBackgroundColor(Color.rgb(0, 102, 0));
+                    textView2.setText(" 5");
                     textView.setText("M");
                     break;
                 case 5:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(102, 255, 51));
-                    textView2.setText("8");
+                    mLinearLayout.setBackgroundColor(Color.rgb(102, 255, 51));
+                    textView2.setText(" 8");
                     textView.setText("L");
                     break;
                 case 6:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(255, 204, 0));
+                    mLinearLayout.setBackgroundColor(Color.rgb(255, 204, 0));
                     textView2.setText("13");
                     textView.setText("XL");
                     break;
                 case 7:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(255, 51, 0));
+                    mLinearLayout.setBackgroundColor(Color.rgb(255, 51, 0));
                     textView2.setText("21");
                     textView.setText("XXL");
                     break;
                 case 8:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(255, 0, 0));
+                    mLinearLayout.setBackgroundColor(Color.rgb(255, 0, 0));
                     textView2.setText("34");
                     textView.setText("3XL");
                     break;
                 case 9:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(0, 0, 0));
+                    mLinearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
                     textView2.setText("");
                     textView.setText("0");
                     break;
                 case 10:
-                    mRelativeLayout.setBackgroundColor(Color.rgb(0, 0, 0));
+                    mLinearLayout.setBackgroundColor(Color.rgb(0, 0, 0));
                     textView2.setText("");
                     textView.setText("?");
                     break;
